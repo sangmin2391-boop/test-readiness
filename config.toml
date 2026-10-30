@@ -1,0 +1,12 @@
+# Codex 프로젝트 MCP 설정. 프로젝트를 신뢰(trust)해야 적용된다.
+# npx가 패키지를 처음 내려받는 시간을 고려해 시작 대기 시간을 늘렸다(기본 10초).
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@0.0.83", "--headless", "--isolated"]
+startup_timeout_sec = 120
+
+[mcp_servers.context7]
+command = "npx"
+args = ["-y", "@upstash/context7-mcp@4.4.4"]
+startup_timeout_sec = 120
